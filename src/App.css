@@ -71,6 +71,8 @@ ul{
 }
 
 .recent-searches{
+  color:black;
+  font-weight: bold;
   background-color: azure;
   padding: 5px;
   margin:0 4px;
