@@ -1,10 +1,14 @@
+# Project Deplyed url
+  'https://flicker-search-app.herokuapp.com/'
+
+
 ## Flicker Seach App
 
 A Flickr search web app created using Create React App. 
 Images are searched when user types anything in search bar.
 
 
-Project Deplyed URL = 'https://flicker-search-app.herokuapp.com/'
+
 
 **##containg files
 **
