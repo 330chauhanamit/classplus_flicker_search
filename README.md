@@ -1,6 +1,46 @@
-# Getting Started with Create React App
+## Flicker Seach App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Flickr search web app created using Create React App. 
+Images are searched when user types anything in search bar.
+
+
+Project Deplyed URL = 'https://flicker-search-app.herokuapp.com/'
+
+**##containg files
+**
+/public
+  /fevicon.ico
+  /index.html
+  /logo193.png
+  /logo512.png
+  /manifext.json
+  /robots.txt
+/src
+  /components
+    /ImageList.js
+    /ImagePop.js
+  /App.css
+  /App.js
+  /App.test.js
+  /index.css
+  /index.js
+  /logo.svg
+  /requires.js
+  /url.js
+/.gitignore
+/package.json
+/package-lock.json
+/README.md
+  
+  
+  
+* `public/index.html` is the page template;
+* `src/index.js` is the JavaScript entry point.
+
+All files should be extracted with same file name
+
+## Read instructions below for using assets from JavaScript and HTML.
+
 
 ## Available Scripts
 
