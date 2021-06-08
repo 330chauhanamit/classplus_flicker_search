@@ -1,0 +1,115 @@
+
+/* main class syle */
+body {
+  line-height: 1;
+}
+
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+
+
+/* common class style */
+
+.hor-flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hor-flex.justify{
+  justify-content: center;
+}
+
+
+
+
+/* App styles */
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #061e2a;
+  padding: 20;
+  color: white;
+  position: fixed;
+  margin:auto;
+  top:0;
+  left: 0;
+  right: 0;
+  min-height: 160px;
+  z-index: 5;
+}
+
+.search-input{
+  width: 40%;
+  border-radius: 50px;
+  margin: auto;
+  border: none;
+  padding: 5px;
+
+
+}
+.App-content{
+  margin-top: 200px;
+  position: relative;
+  padding: 40px;
+
+}
+
+.img-arr{
+  cursor: pointer;
+  margin: 8px;
+  animation: all 0.3s ease-in-out;
+
+}
+
+.recent-searches{
+  background-color: azure;
+  padding: 5px;
+  margin:0 4px;
+  font-size: 11px;
+}
+
+.popup-container-enter.image-popup{
+  opacity: 0;
+}
+
+.popup-container-enter.popup-container-enter-active.image-popup{
+  opacity: 1;
+  transition:all 0.5s ease-in-out;
+}
+
+.popup-container-leave{
+  opacity: 1;
+}
+.popup-container-leave.popup-container-leave-active.image-popup{
+  opacity: 0;
+  transition:all 0.5s ease-in-out;
+}
+
+.image-popup-container {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.popup-image {
+  cursor: pointer;
+  -webkit-box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.8);
+  box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.8);
+}
+
+.metadata {
+  transition: all 0.4s ease-in-out;
+  font-size: 13px;
+  color: #FFF;
+  margin: 20px;
+}
