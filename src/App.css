@@ -1,4 +1,5 @@
 
+
 /* main class syle */
 body {
   line-height: 1;
@@ -12,8 +13,6 @@ ul{
   border: 0;
   vertical-align: baseline;
 }
-
-
 
 /* common class style */
 
@@ -35,7 +34,7 @@ ul{
 }
 
 .App-header {
-  background-color: #061e2a;
+  background-color: #000000;
   padding: 20;
   color: white;
   position: fixed;
@@ -43,19 +42,22 @@ ul{
   top:0;
   left: 0;
   right: 0;
-  min-height: 160px;
+  min-height: 200px;
   z-index: 5;
+  transition: top 0.3s;
 }
 
 .search-input{
   width: 40%;
-  border-radius: 50px;
+  border-radius: 5px;
   margin: auto;
   border: none;
   padding: 5px;
-
+  text-decoration-line: none;
+  border-bottom: 2px #0063dc;
 
 }
+.search-input:focus{outline: none;}
 .App-content{
   margin-top: 200px;
   position: relative;
@@ -63,18 +65,24 @@ ul{
 
 }
 
-.img-arr{
-  cursor: pointer;
-  margin: 8px;
-  animation: all 0.3s ease-in-out;
-
+.img-arr {
+  height: 40vh;
+  flex-grow: 1;
 }
 
+
+.img-list {
+
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
 .recent-searches{
   color:black;
-  font-weight: bold;
-  background-color: azure;
+  background-color: rgb(255, 255, 255);
   padding: 5px;
+  border-radius: 3px;
   margin:0 4px;
   font-size: 11px;
 }
@@ -100,7 +108,7 @@ ul{
   position: fixed;
   bottom: 0;
   top: 0;
-  right: 0;
+  right:0;
   left: 0;
 }
 .popup-image {
@@ -114,4 +122,10 @@ ul{
   font-size: 13px;
   color: #FFF;
   margin: 20px;
+}
+
+img {
+  margin: auto;
+  display: block;
+  max-width: 700px;
 }
