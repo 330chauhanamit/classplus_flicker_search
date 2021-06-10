@@ -99,7 +99,11 @@ export default class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <h3>My Flicker Search</h3>
+           <h1 className="header">
+            <span style={{color:"#0063dc"}}>My</span>
+            <span style={{color:"#ff0084"}}> flicker</span>
+            <span > Search</span>
+          </h1>
           <div className="">
 						<input
 							type="text"
