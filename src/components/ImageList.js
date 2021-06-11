@@ -14,7 +14,7 @@ export default class ImageList extends Component {
               const { farm, server, id, secret} = image;
               return(
                      <li key={ind} className = "img-arr" onClick={()=>onClick(ind)}>
-                            <img src={imageurl(farm, server, id, secret)} width="250px" alt=""/>
+                            <img className="img-list" src={imageurl(farm, server, id, secret)} alt=""/>
                      </li>
               )
        }
