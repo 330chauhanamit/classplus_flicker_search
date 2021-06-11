@@ -17,15 +17,17 @@ export default class App extends Component {
       inputtext:"",
       imagelist:[],
       showPopUp: false,
-      pageN:1,
+      pageN:2 ,
       popUp: null,
       queries:queries?queries:[],
+      showRecent:false
     };
     // Binding function to use in component
     this.onInputChange= this.onInputChange.bind(this);
     this.hScroll = this.hScroll.bind(this);
     this.imageClick = this.imageClick.bind(this);
     this.onPopUpHide = this.onPopUpHide.bind(this);
+    this.selectFromSearch = this.selectFromSearch.bind(this);
 	
 	}
   //For getting updated while serving
@@ -67,12 +69,19 @@ export default class App extends Component {
     this.setState({ popUp: null });
   }
 
+  selectFromSearch(inp){
+    const inputtext = inp.query;
+    this.setState({inputtext});
+    this.search(inputtext);
+    }
+
   // After taking input from search bar pass to the state
   onInputChange(inp){
     const inputtext = inp.currentTarget.value;
     this.setState({inputtext});
     const trimmed = inputtext.replace(/\s+$/, "");
 		if (trimmed.length) this.search(trimmed);
+    
 
   }
 // updateing onscrolling
@@ -83,7 +92,6 @@ export default class App extends Component {
               .then(parse)
               .then(response => {console.log(response);
                   response.photos.photo.forEach(photo => this.state.imagelist.push(photo));
-                   console.log("AA");
                   this.setState({
                     imagelist: this.state.imagelist,
                     pageN :response.photos.page,
@@ -99,7 +107,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-           <h1 className="header">
+          <h1 className="header">
             <span style={{color:"#0063dc"}}>My</span>
             <span style={{color:"#ff0084"}}> flicker</span>
             <span > Search</span>
@@ -107,6 +115,7 @@ export default class App extends Component {
           <div className="">
 						<input
 							type="text"
+              placeholder="Search"
 							className="search-input"
 							value={this.state.inputtext}
 							onChange={this.onInputChange}
@@ -116,13 +125,14 @@ export default class App extends Component {
 						<div style={{ marginTop: "15px" }}>
 							<h5 style={{ marginBottom: "6px" }}>Recent Searches</h5>
 							<ul className="hor-flex justify">
-								{this.state.queries.map((query, ind) =>
-									<li key={ind} className="recent-searches">
+								{this.state.inputtext!==""? this.state.queries.map((query, ind) =>
+									<li key={ind} className="recent-searches" onClick={()=>this.selectFromSearch({query})}>
 										{query}
 									</li>
-								)}
+								):console.log(this.state.inputtext)}
 							</ul>
 						</div>}
+          
         </div>
         <div className="App-content">
           {this.state.imagelist.length
