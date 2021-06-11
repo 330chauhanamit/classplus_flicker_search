@@ -4,6 +4,15 @@ body {
   line-height: 1;
 }
 
+img {
+  cursor: pointer;
+  max-width: 600px;
+}
+
+
+.list{
+  list-style: none;
+}
 
 ul{
   list-style: none;
@@ -23,10 +32,6 @@ ul{
 .hor-flex.justify{
   justify-content: center;
 }
-
-
-
-
 /* App styles */
 .App {
   text-align: center;
@@ -41,7 +46,7 @@ ul{
   top:0;
   left: 0;
   right: 0;
-  min-height: 200px;
+  min-height: 205px;
   z-index: 5;
   transition: top 0.3s;
 }
@@ -71,13 +76,14 @@ ul{
 
 
 .img-list {
-
+  cursor: pointer;
   max-height: 100%;
   min-width: 100%;
   object-fit: cover;
   vertical-align: bottom;
 }
 .recent-searches{
+  cursor: pointer;
   color:black;
   background-color: rgb(255, 255, 255);
   padding: 5px;
@@ -123,8 +129,3 @@ ul{
   margin: 20px;
 }
 
-img {
-  margin: auto;
-  display: block;
-  max-width: 700px;
-}
