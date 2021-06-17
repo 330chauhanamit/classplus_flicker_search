@@ -86,7 +86,7 @@ export default class App extends Component {
   }
 // updateing onscrolling
   hScroll(){
-      let url =  constant.BASE_URL+"&text=" + this.state.inputtext + "&page" + (this.state.pageN + 1);
+      let url =  constant.BASE_URL+"&text=" + this.state.inputtext + "&page=" + (this.state.pageN + 1);
       fetch(url)
               .then(checkHttpStatus)
               .then(parse)
