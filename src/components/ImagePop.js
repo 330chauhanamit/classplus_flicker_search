@@ -27,7 +27,7 @@ export default class ImagePop extends Component {
 					style={{ marginTop: "150px" }}
 					onClick={this.onPhotoClick}
 				/>
-				{this.state.showMeta &&
+				{this.state.metaData &&
 					<ul className="image-metadata">
 						<li style={{ margin: "5px 0" }}>
 							Title: {title}
